@@ -135,9 +135,9 @@ main {
     align-self: flex-end;
     padding: 2em;
     /* DEBUG */
-    background-color: rgb(49, 87, 110);
+    background-color: rgb(29, 49, 62);
 }
-
+/* menu */
 main .menu ul{
     display: flex;
     flex-direction: row;
@@ -148,13 +148,16 @@ main .menu ul{
     padding: 0 .8em;
 }
 
-/* .container-main {
-    width: 98%;
-    margin: 0 auto;
-    border: 1px dashed rgb(103, 255, 252);
-    height: 98%;
-}  */
+/* recently-played */
+.col {
+    width: 200px;
+    justify-content: center;
+    margin-right: 1em;
+}
 
+.text-album{
+    text-align: center;
+}
 /* FOOTER  */
 
 footer {
