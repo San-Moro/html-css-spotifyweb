@@ -54,19 +54,28 @@ img {
 header {
     width: calc(100% - var(--sidebar-width));
     height: var(--header-height);
-    /* background-color: var(--bg-header); */
+    background-color: var(--bg-header);
     position: absolute;
     right: 0;
     padding: 1.5em;
-
-    /* DEBUG */
-    background-color: #373e4d;
 }
 
 header .container {
-    border: 1px dashed rgb(188, 243, 192);
-    height: 99%;
     margin: 0 auto;
+    justify-content: flex-end;
+}
+
+header a {
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    
 }
 
 /* Sidebar section */
