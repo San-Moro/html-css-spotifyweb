@@ -55,6 +55,24 @@ a, ul {
     position: relative;
 }
 
+/* margin top */
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.mt-3 {
+    margin-top: 3em;
+}
+
+.mt-4 {
+    margin-top: 4em;
+}
+
+/* margin bottom */
 .mb-1 {
     margin-bottom: 1em;
 }
@@ -64,7 +82,7 @@ a, ul {
 }
 
 .mb-3 {
-    margin-bottom: 3 em;
+    margin-bottom: 3em;
 }
 
 /* HEADER */
@@ -130,13 +148,13 @@ header a {
 main {
     height: calc(100% - var(--header-height));
     width: calc(100% - var(--sidebar-width));
-    /* background-color: var(--bg-main); */
+    background-color: var(--bg-main);
     justify-content: flex-end;
     align-self: flex-end;
     padding: 2em;
-    /* DEBUG */
-    background-color: rgb(29, 49, 62);
+    overflow-y: auto;
 }
+
 /* menu */
 main .menu ul{
     display: flex;
@@ -150,6 +168,7 @@ main .menu ul{
 
 /* recently-played */
 .col {
+    height: 200px;
     width: 200px;
     justify-content: center;
     margin-right: 1em;
@@ -166,4 +185,24 @@ footer {
     background-color: var(--bg-footer);
     position: absolute;
     bottom: 0;
+}
+
+/* player-footer */
+
+.player-footer {
+    justify-content: space-between;
+}
+
+.album , .audio {
+    width: 200px;
+    height: var(--footer-height);
+    /* DEBUG */
+    background-color: #7d7f84;
+}
+
+.actions {
+    width: 45%;
+    height: var(--footer-height);
+    /* DEBUG */
+    background-color: antiquewhite;
 }
