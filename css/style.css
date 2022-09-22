@@ -101,6 +101,7 @@ h4 {
     font-size: 1.2rem;
 }
 
+
 p {
     font-size: 1rem ;
 }
@@ -211,12 +212,13 @@ header a {
 /* MAIN */
 
 main {
-    height: calc(100% - var(--header-height) - var(--footer-height));
+    height: calc(100% - var(--header-height));
     width: calc(100% - var(--sidebar-width));
     background-color: var(--bg-main);
     justify-content: flex-end;
     align-self: flex-end;
     padding: 2em;
+    padding-top: var(--footer-height);
     margin-bottom: 90px;
     overflow-y: auto;
 }
@@ -226,6 +228,7 @@ main .menu ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 1em;
 }
 
 .menu li a {
@@ -274,20 +277,68 @@ footer {
 
 .player-footer {
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
+/* album */
 .album , .audio {
     width: 200px;
     height: var(--footer-height);
-    /* DEBUG */
-    background-color: #7d7f84;
 }
 
+.album img {
+    height: var(--footer-height);
+    padding: 2em 1em;
+}
+
+footer .text-cover-album {
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: column;
+}
+
+footer .album p {
+    font-size: 1em;
+    color: var(--light-gray);
+}
+footer .album .icon {
+    align-content: center;
+    margin-left: 2.5em;
+}
+footer .album i {
+    font-size: 1.4em;
+    color: var(--light-gray);
+    padding: .2em;
+}
+/* actions */
 .actions {
     width: 45%;
     height: var(--footer-height);
-    /* DEBUG */
-    background-color: antiquewhite;
+    flex-direction: column;
+    align-content: center
+}
+
+.actions-icon .fa-circle-play{
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.actions-icon {
+    font-size: 1.6em;
+}
+
+.actions-icon i {
+    padding: .5em;
+}
+
+/* audio */
+.audio {
+    align-content: center;
+}
+.icon-audio i {
+    color: white;
+    font-size: 1.4em;
+    padding: .2em;
 }
 
 /* MEDIA QUERIES */
@@ -313,3 +364,32 @@ footer {
 
 /* MEDIA QUERIES */ 
 /* phone  (screen xs)  - 600px */
+
+@media screen and (max-width:600px) {
+    #sidebar {
+        width: 50px;
+    }
+
+    /* playlist sidebar */
+    .playlist {
+        display: none;
+    }
+    /* profile */
+    #sidebar .text{
+        display: block;
+    }
+
+    main {
+        width: calc(100% - 50px);
+    }
+
+    header {
+        width: calc(100% - 50px);
+    }
+
+    /* recently-played */
+    .col {
+        height: 200px;
+        width: 200px;  
+    }
+}
