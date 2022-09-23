@@ -108,12 +108,24 @@ p {
 
 /* ANIMATIONS */
 /* hover */
+
+/* Sidebar */
 #sidebar nav li:hover{
     border-bottom: 2px solid var(--animation);
 }
-
+/* MAIN */
 .menu li a:hover{
     border-bottom: 2px solid var(--animation);
+}
+
+.col img:hover {
+    opacity: .4;
+}
+.cover-album i {
+    display: none;
+} 
+.cover-album:hover i {
+    display: block;
 }
 
 
@@ -264,6 +276,16 @@ main .menu ul{
     justify-content: center;
     margin: 0 2em 6em 0;  
 }
+
+.cover-album i {
+    font-size: 4.5em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 .col .text-album{
     text-align: center;  
