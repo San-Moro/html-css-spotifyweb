@@ -25,7 +25,7 @@ img {
 a, ul {
     text-decoration: none;
     list-style-type: none;
-    color: white;
+    color: var(--secondary-text)
 }
 
 
@@ -55,6 +55,10 @@ a, ul {
 
 .p-relative {
     position: relative;
+}
+
+i {
+    color: inherit;
 }
 
 /* margin top */
@@ -109,13 +113,35 @@ p {
 /* ANIMATIONS */
 /* hover */
 
-/* Sidebar */
-#sidebar nav li:hover{
-    border-bottom: 2px solid var(--animation);
+/* common */
+li a:hover {
+    color: white;
 }
-/* MAIN */
+
+li i:hover {
+    color: white;
+}
+
+/* hover HEADER */
+header a:hover {
+    transform: scale(1.1);
+}
+/* hover Sidebar */
+#sidebar nav a i:hover{
+    color: white;
+}
+
+.playlist ul span:hover {
+    color: white;
+}
+
+.sidebar-bottom .install a:hover {
+    color: white;
+}
+
+/* hover MAIN */
 .menu li a:hover{
-    border-bottom: 2px solid var(--animation);
+    color: white;
 }
 
 .col img:hover {
@@ -191,7 +217,7 @@ header a {
 #sidebar i {
     font-size: 1.8rem;
     margin-right: .5em;
-    color: white;
+    color: var(--light-gray);
 }
 
 /* create playlist */
@@ -260,7 +286,10 @@ main .menu ul{
     margin-top: 1em;
     
 }
-
+main nav ul li:first-child {
+    border-bottom: 2px solid var(--animation);
+    padding-bottom: .8em;
+}
 .menu li a {
     color: var(--secondary-text);
     font-size: 1.2rem;
