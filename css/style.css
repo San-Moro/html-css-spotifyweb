@@ -151,6 +151,9 @@ header a {
 #sidebar img {
     width: 65%;
 }
+#sidebar .logo-small {
+    display: none;
+}
 /* nav sidebar */
 #sidebar li {
     font-size: 1.2rem ;
@@ -302,9 +305,10 @@ footer .album p {
     color: var(--light-gray);
 }
 footer .album .icon {
-    align-content: center;
+    align-items: center;
     margin-left: 2.5em;
 }
+
 footer .album i {
     font-size: 1.4em;
     color: var(--light-gray);
@@ -355,6 +359,7 @@ footer .album i {
 /* tablet  (screen s)  - 700px */
 
 @media screen and (max-width:700px) {
+    /* MAIN */
     main .menu ul {
         flex-wrap: wrap;
         line-height: 3em;
@@ -366,8 +371,17 @@ footer .album i {
 /* phone  (screen xs)  - 600px */
 
 @media screen and (max-width:600px) {
+    /* Sidebar section */
     #sidebar {
         width: 50px;
+    }
+    /* logo */
+    #sidebar .logo-small img {
+        display: inline-block;
+    }
+    /* nav */
+    #sidebar nav span {
+        display: none;
     }
 
     /* playlist sidebar */
@@ -378,7 +392,7 @@ footer .album i {
     #sidebar .text{
         display: block;
     }
-
+    /* MAIN */
     main {
         width: calc(100% - 50px);
     }
@@ -391,5 +405,19 @@ footer .album i {
     .col {
         height: 200px;
         width: 200px;  
+    }
+
+    /* FOOTER */
+
+    /* album */
+    .album img {
+        height: var(--footer-height);
+        padding: 2.7em 1.2em;
+    }
+
+    footer .album .icon {
+        justify-content: center;
+        margin-left: 2.5em;
+        flex-direction: column;
     }
 }
